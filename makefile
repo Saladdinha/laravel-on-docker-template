@@ -7,6 +7,7 @@ compose-presetup:
 	@echo "file $(COMPOSE_FILE) success created."
 	@composer create-project laravel/laravel app
 	@echo "laravel import success."
+	@dos2unix ./docker/entrypoint.sh
 	@"C:\Program Files\Git\bin\bash.exe" move_files.sh
 	@echo "docker files success move."
 	@echo "COMPOSE PRE SETUP SUCCESFFULLY COMPLETE."
