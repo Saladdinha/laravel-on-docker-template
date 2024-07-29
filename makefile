@@ -1,8 +1,8 @@
 # Nome do arquivo docker-compose.yml
 COMPOSE_FILE=compose.yml
 
-# Target para criar o arquivo docker-compose.yml usando o script shell
-compose-pre-setup:
+# Target pre-setup
+compose-presetup:
 	@"C:\Program Files\Git\bin\bash.exe" generate_compose.sh
 	@echo "file $(COMPOSE_FILE) success created."
 	@composer create-project laravel/laravel app
@@ -12,6 +12,7 @@ compose-pre-setup:
 	@echo "COMPOSE PRE SETUP SUCCESFFULLY COMPLETE."
 	@echo "@blueVulcan."
 
+# Target run containers
 compose-up:
 	@docker-compose -f $(COMPOSE_FILE) up -d
 	@echo "Compose up complete."
