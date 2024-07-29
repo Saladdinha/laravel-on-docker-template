@@ -14,13 +14,11 @@
 </ul>
 
 <h2>database important:</h2>
-<p>if you have a database in micro service or other local, you need remove db as a service compose</p>
+<p>If you have a database in microservice or elsewhere, you must remove the database as a compose service</p>
 
 <h2>how to run:</h2>
 <ul>
-<li>1 - execute command: composer create-project laravel/laravel app</li>
-<li>2 - copy or cut docker paste to /app</li>
-<li>3 - config .env variables</li>
-<li>4 - execute command: make compose-generate</li>
-<li>5 - execute command: make compose-up (ignore if you meet the database important)</li>
+<li>1 - execute command: make compose-pre-setup</li>
+<li>2 - config .env variables</li>
+<li>3 - execute command: make compose-up (ignore if you do not meet the requirements of the important database notice)</li>
 </ul>
